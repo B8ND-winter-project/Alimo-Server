@@ -1,4 +1,4 @@
-package com.b1nd.alimoserver.domain.survey.adapter.out.persistence.entity;
+package com.b1nd.alimoserver.domain.vote.adapter.out.persistence.entity;
 
 import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
 import jakarta.persistence.*;
@@ -11,16 +11,16 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Getter
-@Table(name = "tbl_survey")
+@Table(name = "tbl_vote")
 @DynamicUpdate
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class SurveyJpaEntity extends BaseTimeEntity {
+public class VoteJpaEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long surveyId;
+    private Long voteId;
 
     @Size(max = 30)
-    private String surveyName;
+    private String content;
 }

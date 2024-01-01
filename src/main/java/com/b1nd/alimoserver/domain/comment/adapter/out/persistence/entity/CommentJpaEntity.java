@@ -1,8 +1,7 @@
-package com.b1nd.alimoserver.domain.notification.adapter.out.persistence.entity;
+package com.b1nd.alimoserver.domain.comment.adapter.out.persistence.entity;
 
 import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -12,16 +11,16 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Getter
-@Table(name = "tbl_notification")
+@Table(name = "tbl_comment")
 @DynamicUpdate
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class NotificationJpaEntity extends BaseTimeEntity {
+public class CommentJpaEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long notificationId;
+    private Long commentId;
 
-    @Column(columnDefinition = "TEXT")
+    @Size(max=100)
     private String content;
 }
