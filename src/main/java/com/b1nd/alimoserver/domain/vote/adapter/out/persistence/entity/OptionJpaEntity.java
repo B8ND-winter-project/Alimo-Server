@@ -1,4 +1,4 @@
-package com.b1nd.alimoserver.domain.option.adapter.out.persistence.entity;
+package com.b1nd.alimoserver.domain.vote.adapter.out.persistence.entity;
 
 import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
 import jakarta.persistence.*;

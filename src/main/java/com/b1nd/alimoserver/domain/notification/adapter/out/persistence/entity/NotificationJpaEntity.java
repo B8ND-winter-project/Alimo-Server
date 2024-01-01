@@ -1,5 +1,6 @@
-package com.b1nd.alimoserver.domain.member.adapter.out.persistence.entity;
+package com.b1nd.alimoserver.domain.notification.adapter.out.persistence.entity;
 
+import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -11,26 +12,16 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Getter
-@Table(name = "tbl_member")
+@Table(name = "tbl_notification")
 @DynamicUpdate
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class MemberJpaEntity {
+public class NotificationJpaEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long memberId;
-
-    @Size(max =320)
-    @NotNull
-    private String email;
-
-    private Long grade;
-
-    @Size(max =10)
-    @NotNull
-    private String name;
+    private Long notificationId;
 
     @Column(columnDefinition = "TEXT")
-    private String fcmToken;
+    private String content;
 }

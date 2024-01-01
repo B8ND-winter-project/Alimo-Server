@@ -1,7 +1,9 @@
-package com.b1nd.alimoserver.domain.reaction.adapter.out.persistence.entity;
+package com.b1nd.alimoserver.domain.notification.adapter.out.persistence.entity;
 
+import com.b1nd.alimoserver.domain.notification.application.domain.model.enums.Emoji;
 import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,16 +12,17 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Getter
-@Table(name = "tbl_notification")
+@Table(name = "tbl_reaction")
 @DynamicUpdate
 @SuperBuilder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class NotificationJpaEntity extends BaseTimeEntity {
+public class ReactionJpaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long notificationId;
+    private Long reactionId;
 
-    @Column(columnDefinition = "TEXT")
-    private String content;
+    @Size(max=10)
+    @Enumerated(EnumType.STRING)
+    private Emoji emoji;
 }
