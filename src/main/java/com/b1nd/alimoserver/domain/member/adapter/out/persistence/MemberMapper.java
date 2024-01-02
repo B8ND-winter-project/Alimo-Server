@@ -20,7 +20,7 @@ public class MemberMapper {
 
     public MemberJpaEntity mapToJpaEntity(Member member) {
         return MemberJpaEntity.builder()
-                .memberId(member.memberId().getValue())
+                .memberId(member.memberId().value())
                 .name(member.name())
                 .password(member.password())
                 .email(member.email())

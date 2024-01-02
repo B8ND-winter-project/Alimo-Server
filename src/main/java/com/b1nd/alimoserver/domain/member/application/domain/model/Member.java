@@ -13,7 +13,6 @@ public record Member(
         String password
 ) {
 
-    @Value
     public record MemberId(Long value) {
         @Override
         public boolean equals(Object o) {

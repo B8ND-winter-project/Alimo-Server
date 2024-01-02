@@ -1,8 +1,7 @@
-package com.b1nd.alimoserver.global.lib.jpa;
+package com.b1nd.alimoserver.global.infra.jpa;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.b1nd.alimoserver.global.infra.jpa.BaseTimeEntity;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultSupertypeSerializer")
 public class QBaseTimeEntity extends EntityPathBase<BaseTimeEntity> {
 
-    private static final long serialVersionUID = -1968470079L;
+    private static final long serialVersionUID = -1638539882L;
 
     public static final QBaseTimeEntity baseTimeEntity = new QBaseTimeEntity("baseTimeEntity");
 

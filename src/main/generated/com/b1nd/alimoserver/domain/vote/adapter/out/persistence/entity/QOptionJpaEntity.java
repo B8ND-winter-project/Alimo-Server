@@ -19,7 +19,7 @@ public class QOptionJpaEntity extends EntityPathBase<OptionJpaEntity> {
 
     public static final QOptionJpaEntity optionJpaEntity = new QOptionJpaEntity("optionJpaEntity");
 
-    public final com.b1nd.alimoserver.global.lib.jpa.QBaseTimeEntity _super = new com.b1nd.alimoserver.global.lib.jpa.QBaseTimeEntity(this);
+    public final com.b1nd.alimoserver.global.infra.jpa.QBaseTimeEntity _super = new com.b1nd.alimoserver.global.infra.jpa.QBaseTimeEntity(this);
 
     public final StringPath content = createString("content");
 

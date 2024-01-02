@@ -17,10 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/sign-in")
 @RequiredArgsConstructor
-public class SignInController {
+public class AuthInController {
     private final SignInUseCase signInUseCase;
 
     @PostMapping("/dodam")
+    public ResponseData<Token> signInWithDodam(
+            @RequestBody @Valid SignInRequest request
+    ){
+        return ResponseData.of(HttpStatus.OK, "login success", signInUseCase.signIn(request));
+    }
+
+    @PostMapping("")
     public ResponseData<Token> getSignIn(
             @RequestBody @Valid SignInRequest request
     ){
