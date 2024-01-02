@@ -29,6 +29,8 @@ public class QMemberJpaEntity extends EntityPathBase<MemberJpaEntity> {
 
     public final StringPath name = createString("name");
 
+    public final StringPath password = createString("password");
+
     public QMemberJpaEntity(String variable) {
         super(MemberJpaEntity.class, forVariable(variable));
     }

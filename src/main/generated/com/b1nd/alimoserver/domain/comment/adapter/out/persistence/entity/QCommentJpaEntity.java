@@ -19,7 +19,7 @@ public class QCommentJpaEntity extends EntityPathBase<CommentJpaEntity> {
 
     public static final QCommentJpaEntity commentJpaEntity = new QCommentJpaEntity("commentJpaEntity");
 
-    public final com.b1nd.alimoserver.global.lib.jpa.QBaseTimeEntity _super = new com.b1nd.alimoserver.global.lib.jpa.QBaseTimeEntity(this);
+    public final com.b1nd.alimoserver.global.infra.jpa.QBaseTimeEntity _super = new com.b1nd.alimoserver.global.infra.jpa.QBaseTimeEntity(this);
 
     public final NumberPath<Long> commentId = createNumber("commentId", Long.class);
 

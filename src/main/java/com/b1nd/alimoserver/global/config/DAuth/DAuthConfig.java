@@ -4,7 +4,9 @@ import com.b1nd.dauth.DAuth;
 import com.b1nd.dauth.client.DAuthBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class DAuthConfig {
     @Value("${DAuth.clientId}")
     private String CLIENT_ID;

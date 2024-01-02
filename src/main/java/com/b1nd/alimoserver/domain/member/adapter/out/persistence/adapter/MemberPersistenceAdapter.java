@@ -5,10 +5,12 @@ import com.b1nd.alimoserver.domain.member.adapter.out.persistence.MemberMapper;
 import com.b1nd.alimoserver.domain.member.adapter.out.persistence.entity.MemberJpaEntity;
 import com.b1nd.alimoserver.domain.member.application.domain.model.Member;
 import com.b1nd.alimoserver.domain.member.application.port.in.CommandMemberPort;
+import com.b1nd.alimoserver.global.annotations.PersistenceAdapter;
 import com.b1nd.dauth.DAuth;
 import com.b1nd.dauth.client.response.DAuthUserInfo;
 import lombok.RequiredArgsConstructor;
 
+@PersistenceAdapter
 @RequiredArgsConstructor
 public class MemberPersistenceAdapter implements CommandMemberPort {
     private final DAuth dAuth;
