@@ -1,4 +1,4 @@
-package com.b1nd.alimoserver.global.lib.jpa;
+package com.b1nd.alimoserver.global.infra.jpa;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
