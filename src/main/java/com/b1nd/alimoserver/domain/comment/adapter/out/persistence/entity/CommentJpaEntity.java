@@ -1,6 +1,6 @@
 package com.b1nd.alimoserver.domain.comment.adapter.out.persistence.entity;
 
-import com.b1nd.alimoserver.global.lib.jpa.BaseTimeEntity;
+import com.b1nd.alimoserver.global.infra.jpa.BaseTimeEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;

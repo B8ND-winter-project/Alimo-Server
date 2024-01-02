@@ -25,6 +25,8 @@ public class MemberJpaEntity {
     @NotNull
     private String email;
 
+    private String password;
+
     private Long grade;
 
     @Size(max =10)
@@ -33,4 +35,10 @@ public class MemberJpaEntity {
 
     @Column(columnDefinition = "TEXT")
     private String fcmToken;
+
+    public void updateMemberInfo(String email, Long grade, String name) {
+        this.email = email;
+        this.grade = grade;
+        this.name = name;
+    }
 }
