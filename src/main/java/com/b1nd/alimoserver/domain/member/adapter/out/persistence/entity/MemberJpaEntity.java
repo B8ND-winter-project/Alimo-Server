@@ -1,5 +1,7 @@
 package com.b1nd.alimoserver.domain.member.adapter.out.persistence.entity;
 
+import com.b1nd.alimoserver.domain.childCode.adapter.out.persistence.entity.ChildCodeJpaEntity;
+import com.b1nd.alimoserver.domain.member.application.domain.consts.MemberRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -36,9 +38,20 @@ public class MemberJpaEntity {
     @Column(columnDefinition = "TEXT")
     private String fcmToken;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "childCode")
+    private ChildCodeJpaEntity childCode;
+
+    @Enumerated(EnumType.STRING)
+    private MemberRole role;
+
     public void updateMemberInfo(String email, Long grade, String name) {
         this.email = email;
         this.grade = grade;
+        this.name = name;
+    }
+
+    public void settingParentName(String name){
         this.name = name;
     }
 }
